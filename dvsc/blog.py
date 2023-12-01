@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask import flash
-from flask import g
+from flask import session
 from flask import redirect
 from flask import render_template
 from flask import request
@@ -13,11 +13,13 @@ bp = Blueprint("blog", __name__)
 
 
 @bp.route("/")
+@login_required
 def index():
     """Show all the posts, most recent first."""
-    return render_template("blog/index.html", posts=[])
+    return render_template("blog/index.jinja", posts=[])
 
 
+@login_required
 def get_post(id, check_author=True):
     """Get a post and its author by id.
 
@@ -41,48 +43,6 @@ def get_post(id, check_author=True):
     return post
 
 
-@bp.route("/create", methods=("GET", "POST"))
-@login_required
-def create():
-    """Create a new post for the current user."""
-    if request.method == "POST":
-        title = request.form["title"]
-        body = request.form["body"]
-        error = None
-
-        if not title:
-            error = "Title is required."
-
-        if error is not None:
-            flash(error)
-        else:
-            return redirect(url_for("blog.index"))
-
-    return render_template("blog/create.html")
-
-
-@bp.route("/<int:id>/update", methods=("GET", "POST"))
-@login_required
-def update(id):
-    """Update a post if the current user is the author."""
-    post = get_post(id)
-
-    if request.method == "POST":
-        title = request.form["title"]
-        body = request.form["body"]
-        error = None
-
-        if not title:
-            error = "Title is required."
-
-        if error is not None:
-            flash(error)
-        else:
-            return redirect(url_for("blog.index"))
-
-    return render_template("blog/update.html", post=post)
-
-
 @bp.route("/<int:id>/delete", methods=("POST",))
 @login_required
 def delete(id):
@@ -92,4 +52,4 @@ def delete(id):
     author of the post.
     """
     get_post(id)
-    return redirect(url_for("blog.index"))
+    return redirect(url_for("blog.jinja"))

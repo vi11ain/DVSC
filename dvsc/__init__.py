@@ -1,4 +1,11 @@
-from flask import Flask
+import pathlib
+
+from flask import Flask, render_template
+from werkzeug.exceptions import NotFound
+
+auth_path = pathlib.Path(__file__).parent / "auth.py"
+with open(auth_path, 'rt') as f:
+    auth_code = f.read()
 
 
 def create_app():
@@ -23,5 +30,9 @@ def create_app():
     # app.route, while giving the blog blueprint a url_prefix, but for
     # the tutorial the blog will be the main index
     app.add_url_rule("/", endpoint="index")
+
+    @app.errorhandler(NotFound)
+    def handle_404(e):
+        return render_template("error.jinja", description=e.description, code=auth_code)
 
     return app

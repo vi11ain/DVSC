@@ -17,18 +17,18 @@ Teach the concept of time analysis side-channel attacks and TOCTOUs.
 - [ ] Website
 
   - [ ] Frontend
-    - [ ] Look and feel
+    - [X] Look and feel
     - [ ] Pages
-      - [ ] Login
+      - [X] Login
       - [ ] Downloads
       - [ ] Locked software item
         - [ ] Redirect user to token generation service
   - [ ] Backend
-    - [ ] Configurable secrets
-    - [ ] Time analysis side-channel
-      - [ ] 404 error debug handler leaking source code
-      - [ ] Time analysis side-channel password check
-      - [ ] Hidden debug post parameter to leak page generation time
+    - [X] Configurable secrets
+    - [X] Time analysis side-channel
+      - [X] 404 error debug handler leaking source code
+      - [X] Time analysis side-channel password check
+      - [X] Hidden debug post parameter to leak page generation time
     - [ ] TOCTOU
       - [ ] Check supplied token is valid
 

@@ -14,23 +14,23 @@ Teach the concept of time analysis side-channel attacks and TOCTOUs.
   <summary>Spoiler!</summary>
   </br>
 
-- [ ] Website
+- [X] Website
 
-  - [ ] Frontend
+  - [X] Frontend
     - [X] Look and feel
-    - [ ] Pages
+    - [X] Pages
       - [X] Login
-      - [ ] Downloads
-      - [ ] Locked software item
-        - [ ] Redirect user to token generation service
-  - [ ] Backend
+      - [X] Downloads
+      - [X] Locked software item
+        - [X] Redirect user to token generation service
+  - [X] Backend
     - [X] Configurable secrets
     - [X] Time analysis side-channel
       - [X] 404 error debug handler leaking source code
       - [X] Time analysis side-channel password check
       - [X] Hidden debug post parameter to leak page generation time
-    - [ ] TOCTOU
-      - [ ] Check supplied token is valid
+    - [X] TOCTOU
+      - [X] Check supplied token is valid
 
 - [ ] Token generation service
 
@@ -50,6 +50,9 @@ Teach the concept of time analysis side-channel attacks and TOCTOUs.
         - [ ] Fake about for token generator
       - [ ] status
         - [ ] Status of listening socket and connected clients
+
+- [ ] Documentation
+  - [ ] SETUP Instructions
 
 - [ ] Solution
   - [ ] Python script to perform the side-channel attack

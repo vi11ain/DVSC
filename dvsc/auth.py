@@ -9,6 +9,7 @@ from flask import request
 from flask import session
 from flask import url_for
 
+# Make sure you set password to lowercase characters
 from .config import PASSWORD
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")

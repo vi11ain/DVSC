@@ -32,27 +32,28 @@ Teach the concept of time analysis side-channel attacks and TOCTOUs.
     - [X] TOCTOU
       - [X] Check supplied token is valid
 
-- [ ] Token generation service
+- [X] Token generation service
 
-  - [ ] TOCTOU
-    - [ ] Listen on TCP socket for commands
-    - [ ] Declare global
-    - [ ] Command types
-      - [ ] pass
-        - [ ] Sets global
-        - [ ] Sleeps for cache flush lie (**vulnerable!**)
-        - [ ] Checks global
-        - [ ] Returns token or error
-      - [ ] help \<command\>
-        - [ ] Sets global to \<command\> (**vulnerable!**)
-        - [ ] Print help on given command
-      - [ ] about
-        - [ ] Fake about for token generator
-      - [ ] status
-        - [ ] Status of listening socket and connected clients
+  - [X] TOCTOU
+    - [X] Listen on TCP socket for commands
+    - [X] Declare global
+    - [X] Command types
+      - [X] pass
+        - [X] Sets global
+        - [X] Sleeps for cache flush lie (**vulnerable!**)
+        - [X] Checks global
+        - [X] Returns token or error
+      - [X] help \<command\>
+        - [X] Sets global to \<command\> (**vulnerable!**)
+        - [X] Print help on given command
+      - [X] about
+        - [X] Fake about for token generator
+      - [X] status
+        - [X] Status of listening socket and connected clients
 
 - [ ] Documentation
   - [ ] SETUP Instructions
+    - [ ] Fast startup script
 
 - [ ] Solution
   - [ ] Python script to perform the side-channel attack

@@ -20,7 +20,7 @@ adding an extra layer of protection to your sensitive data.
 Stay ahead of the curve with Token-Gen, your trusted companion for generating secure tokens from passwords.
 """
 # Cache flush were added to fix weird socket timeouts, black magic - it just works
-CACHE_FLUSH_INTERVAL = 0.5
+CACHE_FLUSH_INTERVAL = 0.1
 answer = ''
 
 

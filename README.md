@@ -56,7 +56,7 @@ Teach the concept of time analysis side-channel attacks and TOCTOUs.
     - [X] Fast startup script
 
 - [ ] Solution
-  - [ ] Python script to perform the side-channel attack
+  - [X] Python script to perform the side-channel attack
   - [ ] Python script to beat TOCTOU
 
 </details>

@@ -90,8 +90,8 @@ class SimpleTCPHandler(socketserver.StreamRequestHandler):
             self.wfile.write(response.encode("utf-8") + b"\n")
 
 if __name__ == "__main__":
-    HOST = "127.0.0.1"  # Loopback address
-    PORT = 12345  # You can choose any available port
+    HOST = "0.0.0.0"
+    PORT = 7438
 
     server = socketserver.ThreadingTCPServer((HOST, PORT), SimpleTCPHandler)
 

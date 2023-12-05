@@ -51,9 +51,9 @@ Teach the concept of time analysis side-channel attacks and TOCTOUs.
       - [X] status
         - [X] Status of listening socket and connected clients
 
-- [ ] Documentation
-  - [ ] SETUP Instructions
-    - [ ] Fast startup script
+- [X] Documentation
+  - [X] SETUP Instructions
+    - [X] Fast startup script
 
 - [ ] Solution
   - [ ] Python script to perform the side-channel attack

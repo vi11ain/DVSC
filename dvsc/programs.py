@@ -39,7 +39,7 @@ def unlock():
 
         if token == TOKEN:
             session["valid_token"] = token
-            flash("Token is valid! <3", "info")
+            return redirect(url_for("index"))
         else:
             flash("Invalid token!", "error")
     
